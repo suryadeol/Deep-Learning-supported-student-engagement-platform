@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Output</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url('static/images/stage2.jpg') no-repeat center center fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column; /* Center elements vertically */
+            color: #fff; /* Set default text color to white */
+        }
+
+        .doctor-container {
+            width: 300px;
+            height: 300px;
+            border-radius: 30%;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px; /* Space between the image and heading */
+            border: 5px solid #ffa500;
+        }
+
+        .doctor-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensure the image covers the entire container */
+        }
+
+        h1 {
+            font-size: 36px; /* Large font size for "Successfully Downloaded Your File" */
+            font-weight: bold;
+            color: #fff; /* Dark color for the heading */
+            margin-top: 20px; /* Space between the heading and button */
+        }
+
+        button {
+            background-color: #4CAF50; /* Dark green background for the button */
+            color: #fff;
+            padding: 20px 40px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 24px;
+            transition: background-color 0.3s ease; /* Smooth transition on hover */
+        }
+
+        button:hover {
+            background-color: #45a049; /* Slightly darker green on hover */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="doctor-container">
+        <img class="doctor-img" src="static/images/stage9.jpg" alt="Doctor Image">
+    </div> 
+    <h1>{{n}}.</h1>
+    <form action="/back">
+        <button id="download-button">Go Back</button>
+    </form>
+</body>
+
+</html>

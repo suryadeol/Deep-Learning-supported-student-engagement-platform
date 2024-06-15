@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Student Engagement Platform</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-align: center;
+            background-image: url('static/images/stage1.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        h1 {
+            color: #fff;
+            margin-top: 50px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 36px;
+            font-weight: bold;
+            text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+        }
+        form {
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+        }
+        button {
+            padding: 15px 30px;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-size: 16px;
+            font-weight: bold;
+            position: relative;
+            top: 50px;
+        }
+        button#feed1 {
+            background-color: #ff5733; /* Orange */
+        }
+        button#feed2 {
+            background-color: #4CAF50; /* Green */
+        }
+        button:hover {
+            opacity: 0.5; /* Reduce opacity on hover */
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Student Engagement Platform</h1>
+
+    <form action="/password_student" method="POST">
+        <button id="feed1">Student</button>
+    </form>
+
+    <form action="/admin_pass" method="POST">
+        <button id="feed2">Faculty</button>
+    </form>
+</body>
+</html>

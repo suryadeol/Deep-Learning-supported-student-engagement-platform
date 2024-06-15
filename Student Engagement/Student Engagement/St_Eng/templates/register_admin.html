@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-align: center;
+            background-image: url('static/images/stage7.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .container {
+            max-width: 400px;
+            margin: 100px auto;
+            background-color: rgba(255, 165, 0, 0.8); /* Orange background with transparency */
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            color: #fff; /* Text color: white */
+        }
+        h2 {
+            margin-bottom: 20px;
+            color: #000; /* Heading color: black */
+        }
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #000; /* Border color: black */
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #000; /* Button background color: black */
+            color: #fff;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        input[type="submit"]:hover {
+            background-color: #222; /* Button hover background color: dark gray */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Login</h2>
+        <form action="/register_admin_enter" method="post">
+            <input type="text" name="username" placeholder="Enter your username" required>
+            <input type="password" name="password" placeholder="Enter your password" required>
+            <input type="submit" value="Login">
+        </form>
+    </div>
+</body>
+</html>

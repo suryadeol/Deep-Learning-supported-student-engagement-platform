@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retrieved Data</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('static/images/stage8.jpg'); /* Replace 'dark_blue_background.jpg' with your image URL */
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-align: center;
+            background-size: cover;
+            background-position: center top;
+            background-repeat: no-repeat;
+        }
+    h2 {
+    margin-top: 20px;
+    color: #ff5733; /* Red color */
+}
+
+        table {
+            border-collapse: collapse;
+            width: 70%;
+            margin: 20px auto;
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.4); /* White shadow effect */
+        }
+        th, td {
+            border: 1px solid #fff; /* White border */
+            padding: 12px;
+            text-align: left;
+            color: #333; /* Text color */
+        }
+        th {
+            background-color: #007bff; /* Blue header background */
+            color: #fff; /* Header text color */
+        }
+        tr:nth-child(even) {
+            background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white for even rows */
+        }
+        tr:nth-child(odd) {
+            background-color: rgba(0, 123, 255, 0.5); /* Semi-transparent blue for odd rows */
+        }
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h2>Retrieved Data</h2>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Engagement</th>
+            <th>State</th>
+        </tr>
+        {% for row in rows %}
+        <tr>
+            <td>{{ row[0] }}</td>
+            <td>{{ row[1] }}</td>
+            <td>{{ row[2] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <form action="/">
+        <button id="Back">Go Back</button>
+    </form>
+</body>
+</html>
